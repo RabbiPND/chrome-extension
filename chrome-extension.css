@@ -5,7 +5,7 @@ body {
 }
 
 input {
-    border: 1px solid #5f9341;
+    border: 1px solid goldenrod;
     box-sizing: border-box;
     padding: 10px 7px;
     width: 100%;
@@ -13,11 +13,26 @@ input {
 }
 
 button {
-    background-color: #5f9341;
+    background-color: goldenrod;
     border: none;
     color: white;
     width: 100px;
     margin-top: 5px;
     padding: 10px;
     font-weight: bold;
+}
+
+ul {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+li a {
+    color: goldenrod;
 }

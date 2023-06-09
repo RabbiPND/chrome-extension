@@ -1,7 +1,7 @@
 
  let myLeads = []
 
- const inputEl = document.getElementById('input-el')
+ const inputEl = document.getElementById("input-el")
  const inputBtn = document.getElementById("input-btn")
  const ulEl = document.getElementById('ul-el')
 
@@ -16,8 +16,13 @@ inputBtn.addEventListener('click', function() {
 function renderLeads() {
   let listItems = ""
   for (let i = 0; i < myLeads.length; i++) {
-      listItems += "<li><a href='#' target='_blank'>" + myLeads[i] + " " + "</a></li>"
+      listItems += `
+      <li>
+        <a href='${myLeads[i]}' target='_blank'>${myLeads[i]}</a>
+      </li>
+      `
   }
+  console.log(listItems)
   ulEl.innerHTML = listItems
 }
 
@@ -25,4 +30,4 @@ function renderLeads() {
  //               or
 // const li = document.createElement("li")
 // li.textContent = myLeads[i]
-// ulEl.append(li)
+// ulEl.append(li) 
