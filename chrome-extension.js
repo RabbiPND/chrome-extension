@@ -5,6 +5,22 @@
  const inputBtn = document.getElementById("input-btn")
  const ulEl = document.getElementById('ul-el')
 
+ //myLeads = JSON.parse(myLeads) // (``)
+
+ myLeads = JSON.stringify(myLeads)
+
+ myLeads.push("uiehfiuarehfurh")
+console.log(myLeads)
+
+ 
+ //console.log(typeof myLeads)
+
+
+
+
+ //console.log(localStorage.getItem("myLeads"))
+ //localStorage.removeItem("myLeads")
+
 inputBtn.addEventListener('click', function() {
   myLeads.push(inputEl.value)
   inputEl.value = ""
@@ -25,6 +41,9 @@ function renderLeads() {
   console.log(listItems)
   ulEl.innerHTML = listItems
 }
+
+
+
 
 
  //               or
