@@ -3,10 +3,19 @@
 
  const inputEl = document.getElementById("input-el")
  const inputBtn = document.getElementById("input-btn")
+ const deleteBtn = document.getElementById("clear-el")
  const ulEl = document.getElementById('ul-el')
 
+
  let leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'));
- 
+ console.log(leadsFromLocalStorage)
+
+
+ if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage // checking if leadsFromLocalStorage is truthy
+    renderLeads ()
+ }
+console.log(Boolean (leadsFromLocalStorage))
 
 
 inputBtn.addEventListener('click', function() {
@@ -18,8 +27,17 @@ inputBtn.addEventListener('click', function() {
   renderLeads ()
 
   console.log(localStorage.getItem("myLeads")) //fetch from local storage
-  console.log(leadsFromLocalStorage)
+  
 });
+
+
+deleteBtn.addEventListener('dblclick', function() {
+  console.log("Double Clicked")
+  localStorage.clear()
+  myLeads = []
+  renderLeads()
+})
+
 
 
 function renderLeads() {
@@ -50,6 +68,15 @@ function renderLeads() {
 
 
 /*                Extra stuff(not applicable to the chrome extension)
+
+
+Falsy value:
+.false
+.0
+.""
+.null
+.undefined
+.NaN
 
 
  //               or
