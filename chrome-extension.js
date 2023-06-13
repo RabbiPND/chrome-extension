@@ -1,6 +1,6 @@
 
  let myLeads = []
-
+ let oldLeads = []
  const inputEl = document.getElementById("input-el")
  const inputBtn = document.getElementById("input-btn")
  const deleteBtn = document.getElementById("clear-el")
@@ -13,7 +13,7 @@
 
  if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage // checking if leadsFromLocalStorage is truthy
-    renderLeads ()
+    render (myLeads)
  }
 console.log(Boolean (leadsFromLocalStorage))
 
@@ -24,7 +24,7 @@ inputBtn.addEventListener('click', function() {
 
   localStorage.setItem('myLeads', JSON.stringify(myLeads)) //save to local storage
 
-  renderLeads ()
+  render (myLeads)
 
   console.log(localStorage.getItem("myLeads")) //fetch from local storage
   
@@ -35,17 +35,17 @@ deleteBtn.addEventListener('dblclick', function() {
   console.log("Double Clicked")
   localStorage.clear()
   myLeads = []
-  renderLeads()
+  render(myLeads)
 })
 
 
 
-function renderLeads() {
+function render(leads) {
   let listItems = ""
-  for (let i = 0; i < myLeads.length; i++) {
+  for (let i = 0; i < leads.length; i++) {
       listItems += `
       <li>
-        <a href='${myLeads[i]}' target='_blank'>${myLeads[i]}</a>
+        <a href='${leads[i]}' target='_blank'>${leads[i]}</a>
       </li>
       `
   }
