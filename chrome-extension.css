@@ -13,11 +13,11 @@ input {
 
 }
 
-#input-btn {
+button {
     background-color: goldenrod;
     border: none;
     color: white;
-    width: 100px;
+    width: 120px;
     margin-top: 5px;
     padding: 10px;
     font-weight: bold;
@@ -27,10 +27,6 @@ input {
     background-color: white;
     border: 1px solid goldenrod;
     color: goldenrod;
-    width: 120px;
-    margin-top: 5px;
-    padding: 10px;
-    font-weight: bold;
 }
 
 ul {
