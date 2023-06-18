@@ -30,13 +30,9 @@ inputBtn.addEventListener('click', function() {
 });
 
 
-// const tabs= [{
-//   url: "https://www.linkedin.com/in/per-harald-borgan/"
-// }]
-
 tabBtn.addEventListener('click', function() {
 
-myLeads.push(window.location.href)
+myLeads.push(window.location.href) //how to get the current tab
 localStorage.setItem('myLeads', JSON.stringify(myLeads)) //save to local storage
 render (myLeads)
 console.log(window.location.href) 
@@ -86,36 +82,3 @@ function render(leads) {
 
 
 
-
-/*                Extra stuff(not applicable to the chrome extension)
-
-
-Falsy value:
-.false
-.0
-.""
-.null
-.undefined
-.NaN
-
-
- //               or
-// const li = document.createElement("li")
-// li.textContent = myLeads[i]
-// ulEl.append(li) 
-
-
-
-//  myLeads = JSON.parse(myLeads) // (``)--Turn to array
-//  myLeads.push("uiehfiuarehfurh") 
-//  myLeads = JSON.stringify(myLeads) // turn to string
-//  console.log(typeof myLeads)
-
-//console.log(myLeads)
-
- 
-
- //console.log(localStorage.getItem("myLeads"))
- //localStorage.removeItem("myLeads")
-
- */
